@@ -1,0 +1,292 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.contents{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: linear-gradient(45deg,blue,green); */
+}
+
+img{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.modal{
+    display: flex;
+    width: 1000px;
+    height: 500px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
+                -5px -5px 10px rgba(0, 0, 0, 0.3);
+    background-color: white;
+}
+
+.modal ul{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    border-right: 2px solid rgb(0, 119, 255);
+}
+
+.modal ul li{
+    list-style-type: none;
+    position: relative;
+    padding: 10px 0px;
+    cursor: pointer;
+    /* background-color: red; */
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.modal ul li:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.active{
+    color: rgb(0, 119, 255);
+}
+
+.marker{
+
+    display: block;
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(0, 119, 255);
+    right: -4px;
+    transition: 0.2s;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.right-block{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* padding: 0px 50px; */
+}
+
+.issue,
+.newbooks{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.issue input,
+.info input,
+.newbooks input{
+    padding: 10px 0px;
+    margin: 5px 0px;
+    text-indent: 10px;
+}
+
+.issue input:nth-child(6),
+.info input:nth-child(6){
+    text-indent: 5px;
+}
+
+.issue button,
+.info button,
+.newbooks button{
+    width: 150px;
+    padding: 10px 0px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    align-self: center;
+}
+
+.issue h2,
+.newbooks h2{
+    margin-bottom: 20px;
+}
+
+.submit{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    /* display: none; */
+    width: 100%;
+    /* height: 100%; */
+    top: 0px;
+    /* margin-top: 30px; */
+    text-align: center;
+    /* background-color: red; */
+}
+
+.submit ul{
+    width: 100%;
+    border: none;
+}
+
+
+.search{
+    width: 80%;
+    display: flex;
+    margin-top: 20px;
+    align-self: flex-start;
+    margin-left: 20px;
+}
+
+.search i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: rgb(0, 119, 255);
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.search input{
+    width: 100%;
+    padding: 10px 0px;
+    text-indent: 10px;
+}
+
+.info{
+    display: none;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    align-self: flex-start;
+    margin-top: 30px;
+
+    /* padding: 0px 10px; */
+    /* background-color: red; */
+}
+
+.left-half{
+    
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0px 20px;
+    border-right: 1px solid black;
+    /* background-color: red; */
+}
+
+.right-half{
+    width: 100%;
+    /* justify-self: flex-end; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: yellow; */
+}
+
+.right-half button:nth-child(1){
+    background-color: rgb(0, 119, 255);
+}
+
+.right-half button:nth-child(2){
+    background-color: rgb(2, 189, 2);
+}
+
+.right-half button:nth-child(1){
+    background-color: rgb(0, 119, 255);
+}
+
+
+.submited,
+.issued,
+.books{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* background-color: red; */
+    padding: 0px 20px;
+}
+
+.newbooks{
+    display: none;
+}
+
+.books{
+    display: block;
+}
+
+.submited table,
+.issued table,
+.books table{
+    /* display: block; */
+    /* width: 100%; */
+    /* display: block; */
+    /* position: relative; */
+    /* position: fixed; */
+    text-align: center;
+    border-collapse: collapse;
+    margin-top: 30px;
+    height: 70%;
+    display: block;
+    overflow-y: scroll;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+                -5px -5px 10px rgba(0, 0, 0, 0.1);
+    /* table-layout: fixed; */
+    font-size: 12px;
+    table-layout: fixed;
+    width: 100%;
+    /* background-color: green; */
+    /* table-layout: fixed; */
+}
+
+
+td,th{
+    /* border: 1px solid black; */
+    padding: 5px 0px;
+    width: 10%;
+    /* width: %; */
+}
+
+th{
+    /* background-color: rgba(93, 169, 255, 0.671); */
+    background-color: #00b383;
+    color: white;
+}
+
+
+.submited h2,
+.issued h2,
+.books h2{
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* .issued{
+    display: block;
+} */
+
+
+.submited table::-webkit-scrollbar,
+.issued table::-webkit-scrollbar,
+.books table::-webkit-scrollbar{
+    display: none;
+}

@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script type = "text/JavaScript" src = "{% static 'moment.js' %}" async></script>
+    <script src="{% static 'jquery.js' %}" async></script>
+    <script src="{% static 'script.js' %}" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="contents">
+
+        <img src="{% static 'bg.jpg' %}">
+        <div class="modal">
+            <ul>
+                <div class="marker"></div>
+                <li class="active leftlist showbooks">Books list</li>
+                <li class="leftlist issuebook">Issue a book</li>
+                <li class="leftlist submitbook">Return a book</li>
+                <li class="leftlist submitedbook">Submitted Books</li>
+                <li class="leftlist issuedbook">Issued Book</li>
+                <li class="leftlist addbook">Add a Book</li>
+            </ul>
+
+            <div class="right-block">
+
+                <div class="newbooks">
+                    <h2>Add a Book</h2>
+                    <input type="text" placeholder="ISBN" required>
+                    <input type="text" placeholder="Bookname" required>
+                    <input type="text" placeholder="Author" required>
+                    <input type="text" placeholder="Publication" required>
+                    <input type="text" placeholder="Quantity" required>
+                    <button class="addbtn">Add</button>
+                </div>
+
+                <div class="books">
+                    <h2>List of Books</h2>
+                    <table>
+                        
+                        <tr>
+                            <th>ISBN</th>
+                            <th>Book Name</th>
+                            <th>Author</th>
+                            <th>Publication</th>
+                            <th>Quantity</th>
+                        </tr>
+                       
+                    </table>
+                </div>
+
+                <div class="issue">
+                    <h2>Issue a Book</h2>
+                    <input type="text" placeholder="Name" required>
+                    <input type="text" placeholder="ISBN" required>
+                    <input type="text" placeholder="Branch" required>
+                    <input type="text" placeholder="Rollno" required>
+                    <input type="datetime-local" placeholder="Issued Date" required>
+                    <input type="datetime-local" placeholder="Submit Date" required>
+                    <button class="issuesubmit">Submit</button>
+                </div>
+
+                <div class="submit">
+                    <div class="search">
+                        <input type="text" placeholder="Enter StudentId" class="searchbox">
+                        <div class="icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    
+
+                    <div class="info">
+                        
+                        <div class="left-half">
+                            <input type="text" placeholder="Name" required>
+                            <input type="text" placeholder="Bookname" required>
+                            <input type="text" placeholder="Branch" required>
+                            <input type="text" placeholder="Rollno" required>
+                            <input type="datetime-local" placeholder="Issued Date" required>
+                            <input type="datetime-local" placeholder="Submit Date" required>
+                        </div>
+
+                        <div class="right-half">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                            <button class="submitinfo">Submit</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                
+                <div class="issued">
+                    <h2>Issued Books</h2>
+                    <table>
+                        <th>Student Id</th>
+                        <th>Rollno</th>
+                        <th>Name</th>
+                        <th>Book Id</th>
+                        <th>Branch</th>
+                        <th>Issued</th>
+                        <th>End Date</th>
+                    </table>
+                </div>
+
+                <div class="submited">
+                    <h2>Submitted Books</h2>
+                    <table>
+                        <th>Student id</th>
+                        <th>Rollno</th>
+                        <th>Name</th>
+                        <th>Bookname</th>
+                        <th>Branch</th>
+                        <th>Issued</th>
+                        <th>Submitted</th>
+                        <th>Fine</th>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
